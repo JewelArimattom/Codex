@@ -9,52 +9,58 @@ const LandingPage = () => {
   // Featured blog posts data
   const featuredPosts = [
     {
+      id: 1,
       title: "The Art of Minimalist Writing",
       excerpt: "Discover how simplicity in language creates powerful narratives. Learn the techniques that transform complex ideas into clear, compelling stories that resonate with readers.",
       author: "Sarah Chen",
       date: "Jan 5, 2026",
       readTime: 8,
-      image: null
+      image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&q=80"
     },
     {
+      id: 2,
       title: "Building Creative Habits That Last",
       excerpt: "Consistency beats intensity when it comes to creative work. Explore proven strategies for developing sustainable writing practices that fuel long-term growth and inspiration.",
       author: "Marcus Rivera",
       date: "Jan 4, 2026",
       readTime: 6,
-      image: null
+      image: "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=800&q=80"
     },
     {
+      id: 3,
       title: "Finding Your Authentic Voice",
       excerpt: "Your unique perspective is your greatest asset. This guide helps you discover and refine the voice that makes your writing unmistakably yours in a crowded digital landscape.",
       author: "Elena Volkov",
       date: "Jan 3, 2026",
       readTime: 10,
-      image: null
+      image: "https://images.unsplash.com/photo-1513001900722-370f803f498d?w=800&q=80"
     },
     {
+      id: 4,
       title: "The Science of Engaging Storytelling",
       excerpt: "What makes some stories unforgettable? Dive into the psychology and structure behind narratives that captivate audiences and create lasting emotional connections.",
       author: "Dr. James Park",
       date: "Jan 2, 2026",
       readTime: 12,
-      image: null
+      image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&q=80"
     },
     {
+      id: 5,
       title: "Writing in the Age of AI",
       excerpt: "Technology is reshaping how we create and consume content. Navigate the evolving landscape while maintaining the human touch that makes writing meaningful and authentic.",
       author: "Priya Sharma",
       date: "Jan 1, 2026",
       readTime: 7,
-      image: null
+      image: "https://images.unsplash.com/photo-1519791883288-dc8bd696e667?w=800&q=80"
     },
     {
+      id: 6,
       title: "From Draft to Published: A Complete Guide",
       excerpt: "Transform raw ideas into polished pieces ready for the world. This comprehensive workflow covers everything from ideation to final edits with practical tips at every stage.",
       author: "Alex Thompson",
       date: "Dec 30, 2025",
       readTime: 15,
-      image: null
+      image: "https://images.unsplash.com/photo-1432821596592-e2c18b78144f?w=800&q=80"
     }
   ]
 
@@ -117,7 +123,7 @@ const LandingPage = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link to="/signup" className="btn-primary flex items-center space-x-2 text-base w-full sm:w-auto justify-center">
+              <Link to="/write" className="btn-primary flex items-center space-x-2 text-base w-full sm:w-auto justify-center">
                 <span>Start Writing Free</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
@@ -201,8 +207,8 @@ const LandingPage = () => {
           <p className="text-xl text-secondary mb-10 leading-relaxed">
             Join thousands of writers using Codex to craft, publish, and grow their audience.
           </p>
-          <Link to="/signup" className="btn-primary text-lg inline-flex items-center space-x-2">
-            <span>Create Your Account</span>
+          <Link to="/write" className="btn-primary text-lg inline-flex items-center space-x-2">
+            <span>Write Your Blog</span>
             <ArrowRight className="w-5 h-5" />
           </Link>
         </motion.div>

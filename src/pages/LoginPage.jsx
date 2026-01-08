@@ -166,7 +166,7 @@ const LoginPage = () => {
                   onChange={(e) => setRememberMe(e.target.checked)}
                   className="w-4 h-4 rounded border-border text-accent focus:ring-accent/20"
                 />
-                <span className="ml-2 text-sm text-secondary">Remember me for 2 days</span>
+                <span className="ml-2 text-sm text-secondary">Remember me</span>
               </label>
               <a href="#" className="text-sm font-medium text-accent hover:text-accent-hover transition-colors">
                 Forgot password?
@@ -190,8 +190,6 @@ const LoginPage = () => {
                   <ArrowRight className="w-4 h-4" />
                 </>
               )}
-              <span>Sign In</span>
-              <ArrowRight className="w-4 h-4" />
             </button>
           </form>
 

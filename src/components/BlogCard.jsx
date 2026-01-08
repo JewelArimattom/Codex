@@ -1,16 +1,18 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Clock, User } from 'lucide-react'
 
-const BlogCard = ({ title, excerpt, author, date, readTime, image, index }) => {
+const BlogCard = ({ id, title, excerpt, author, date, readTime, image, index }) => {
   return (
-    <motion.article
-      initial={{ y: 30, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="group bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer border border-border/50"
-    >
+    <Link to={`/blog/${id}`}>
+      <motion.article
+        initial={{ y: 30, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: index * 0.1 }}
+        className="group bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer border border-border/50"
+      >
       {/* Image */}
       <div className="relative h-48 bg-gradient-to-br from-accent/10 to-accent/5 overflow-hidden">
         {image ? (
@@ -49,6 +51,7 @@ const BlogCard = ({ title, excerpt, author, date, readTime, image, index }) => {
         </div>
       </div>
     </motion.article>
+    </Link>
   )
 }
 
