@@ -318,6 +318,7 @@ function BlogPost() {
   const [showAuthorModal, setShowAuthorModal] = useState(false);
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState('');
+  const [isFollowing, setIsFollowing] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -487,8 +488,15 @@ function BlogPost() {
                 <span>{author.stats.followers} followers</span>
               </div>
             </div>
-            <button className="px-6 py-2 bg-accent text-white rounded-lg hover:bg-accent-hover transition-colors font-medium">
-              Follow
+            <button 
+              onClick={() => setIsFollowing(!isFollowing)}
+              className={`px-6 py-2 rounded-lg transition-colors font-medium ${
+                isFollowing 
+                  ? 'bg-gray-400 text-white cursor-default' 
+                  : 'bg-accent text-white hover:bg-accent-hover'
+              }`}
+            >
+              {isFollowing ? 'Following' : 'Follow'}
             </button>
           </div>
         </motion.div>
@@ -590,8 +598,15 @@ function BlogPost() {
                   </div>
                 </div>
 
-                <button className="w-full px-6 py-3 bg-accent text-white rounded-lg hover:bg-accent-hover transition-colors font-medium">
-                  Follow {post.author.split(' ')[0]}
+                <button 
+                  onClick={() => setIsFollowing(!isFollowing)}
+                  className={`w-full px-6 py-3 rounded-lg transition-colors font-medium ${
+                    isFollowing 
+                      ? 'bg-gray-400 text-white cursor-default' 
+                      : 'bg-accent text-white hover:bg-accent-hover'
+                  }`}
+                >
+                  {isFollowing ? 'Following' : `Follow ${post.author.split(' ')[0]}`}
                 </button>
               </div>
             </motion.div>
